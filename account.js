@@ -6,7 +6,7 @@ var website_name = "SG GAME SHOP BD";
 // =======================================================
 // TELEGRAM CHANNEL LINK
 // =======================================================
-var telegram_channel_link = "https://t.me/SGGAMESHOPBD";
+var telegram_channel_link = "@SGGAMESHOP_SUPPORT";
 
 // =======================================================
 // TELEGRAM GROUP LINK
@@ -21,6 +21,6 @@ var youtube_channel_link = "";
 // =======================================================
 // NOTIFICATION TEXT
 // =======================================================
-var notification_text = `সবথেকে কম দামে টপ করার জন্য সেরা ওয়েবসাইট
+var notification_text = `সবথেকে কম দামে টপ আপ করার জন্য সেরা ওয়েবসাইট SG GAME SHOP BD 
 ১০০% বিশ্বস্ত ও দ্রুত ডেলিভারিতে
 অর্ডার করুন নিশ্চিন্তে ♥️`;
