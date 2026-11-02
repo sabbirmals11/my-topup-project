@@ -1324,46 +1324,7 @@ html,body,.pk,.po,.btn,.pay,.q,.card,.nav a,.pv-back{touch-action:manipulation}
 </main>
 
 
-<!-- ADMIN PANEL (frontend layout; connect authenticated backend before live use) -->
-<main class="wrap admin-wrap" id="adminView" hidden>
-  <div class="admin-head">
-    <div>
-      <p style="font-size:11px;color:var(--mu);font-weight:800;letter-spacing:1px">SG GAME SHOP BD</p>
-      <h1>Admin Dashboard</h1>
-    </div>
-    <span class="admin-tag">SETUP REQUIRED</span>
-  </div>
-  <div class="admin-notice">
-    এটি Admin Panel-এর UI/ডিজাইন। এখনো Backend, Database বা নিরাপদ Admin Login-এর সঙ্গে যুক্ত নয়। সার্ভার-সাইড Authentication ও API যুক্ত না করা পর্যন্ত এখানে কোনো বাস্তব অর্ডার/পেমেন্ট/ব্যালেন্স পরিবর্তন হবে না।
-  </div>
-  <div class="admin-grid">
-    <div class="admin-stat"><span>Total Orders</span><strong>—</strong><small>Backend সংযোগ বাকি</small></div>
-    <div class="admin-stat"><span>Pending Orders</span><strong>—</strong><small>Backend সংযোগ বাকি</small></div>
-    <div class="admin-stat"><span>Total Users</span><strong>—</strong><small>Backend সংযোগ বাকি</small></div>
-    <div class="admin-stat"><span>Total Sales</span><strong>৳ —</strong><small>Backend সংযোগ বাকি</small></div>
-  </div>
-
-  <div class="admin-menu">
-    <button type="button" data-admin-tab="orders"><span>▣</span>Orders Management</button>
-    <button type="button" data-admin-tab="products"><span>◆</span>Products & Prices</button>
-    <button type="button" data-admin-tab="users"><span>♙</span>User Management</button>
-    <button type="button" data-admin-tab="payments"><span>৳</span>Payments</button>
-    <button type="button" data-admin-tab="codes"><span>◇</span>Redeem Codes</button>
-    <button type="button" data-admin-tab="banners"><span>▧</span>Banner & Notice</button>
-    <button type="button" data-admin-tab="reports"><span>▤</span>Sales Reports</button>
-    <button type="button" data-admin-tab="support"><span>✆</span>Support</button>
-    <button type="button" data-admin-tab="settings"><span>⚙</span>Website Settings</button>
-  </div>
-
-  <section class="admin-section" id="adminContent">
-    <h2>Quick Overview</h2>
-    <div class="admin-empty">
-      <strong>Admin Panel UI প্রস্তুত</strong><br>
-      Orders, products, customers, payments ও অন্যান্য তথ্য দেখাতে Backend API এবং Database সংযোগ করতে হবে।
-    </div>
-    <button class="admin-action" type="button" id="adminHomeBtn">ওয়েবসাইটে ফিরে যান</button>
-  </section>
-</main>
+<!-- Admin panel is hosted separately at /admin.html and requires server authentication. -->
 
 <!-- CONTACT US PAGE -->
 <main class="wrap" id="ctView" hidden>
@@ -2052,7 +2013,8 @@ setInterval(fetchFreshAccountConfig, 15000);
   function toast(m){toastEl.textContent=m;toastEl.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toastEl.classList.remove('show')},2400)}
   function route(){
     var onFF=location.hash==='#ff-likes', onUid=location.hash==='#uid-topup', onWm=location.hash==='#weekly-monthly', onWl=location.hash==='#weekly-lite', onLu=location.hash==='#level-up-pass', onIn=location.hash==='#indonesia-server', onOr=location.hash==='#my-orders', onCd=location.hash==='#my-codes', onAc=location.hash==='#account', onTr=location.hash==='#my-transaction', onCt=location.hash==='#contact-us';
-    var onAdmin=location.hash==='#admin-panel';
+    if(location.hash==='#admin-panel'){ location.replace('/admin.html'); return; }
+    var onAdmin=false;
     home.hidden=onFF||onUid||onWm||onWl||onLu||onIn||onOr||onCd||onAc||onTr||onCt||onAdmin; foot.hidden=onFF||onUid||onWm||onWl||onLu||onIn||onOr||onCd||onAc||onTr||onCt||onAdmin;
     var tv=document.getElementById('trView'); if(tv) tv.hidden=!onTr;
     var ctv=document.getElementById('ctView'); if(ctv) ctv.hidden=!onCt;
