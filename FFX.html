@@ -603,6 +603,57 @@ html,body,.pk,.po,.btn,.pay,.q,.card,.nav a,.pv-back{touch-action:manipulation}
 .cd-empty .cd-order{display:inline-flex;align-items:center;justify-content:center;margin-top:22px;padding:14px 34px;border-radius:99px;background:var(--g);color:#fff;font-size:17px;font-weight:700;letter-spacing:.3px;box-shadow:0 10px 22px -10px rgba(37,99,235,.85)}
 .cd-empty .cd-order:active{transform:scale(.97)}
 
+/* ===== CONTACT US PAGE ===== */
+#ctView{padding-left:10px;padding-right:10px;padding-bottom:130px}
+.ct-hero{position:relative;margin-top:16px;padding:30px 20px 26px;border-radius:30px;text-align:center;color:#fff;overflow:hidden;background:linear-gradient(135deg,#60a5fa 0%,#2563eb 52%,#1e3a8a 100%);box-shadow:0 22px 44px -22px rgba(37,99,235,.8)}
+.ct-hero:before,.ct-hero:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.12)}
+.ct-hero:before{width:190px;height:190px;right:-60px;top:-90px}
+.ct-hero:after{width:130px;height:130px;left:-45px;bottom:-75px;background:rgba(255,255,255,.09)}
+.ct-hi{position:relative;z-index:1;width:76px;height:76px;margin:0 auto;border-radius:24px;display:grid;place-items:center;font-size:38px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:ctFloat 3.2s ease-in-out infinite}
+.ct-hi svg{stroke-width:1.7}
+.ct-hero h1{position:relative;z-index:1;margin-top:16px;font-size:27px;font-weight:800;letter-spacing:-.6px}
+.ct-hero p{position:relative;z-index:1;margin-top:6px;font-size:13.5px;line-height:1.7;color:rgba(255,255,255,.88)}
+.ct-live{position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:8px 16px;border-radius:99px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);font-size:12.5px;font-weight:700}
+.ct-live i{width:9px;height:9px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 0 rgba(74,222,128,.7);animation:ctPulse 1.8s infinite}
+.ct-sec{margin:22px 4px 0;font-size:13px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--mu)}
+.ct-list{display:grid;gap:14px;margin-top:12px}
+.ct-card{position:relative;display:flex;align-items:center;gap:15px;padding:16px;border-radius:24px;background:#fff;border:1px solid var(--bd);box-shadow:0 12px 28px -18px rgba(20,40,90,.45);overflow:hidden;color:var(--tx);opacity:0;transform:translateY(14px);animation:ctIn .5s cubic-bezier(.2,.8,.2,1) forwards;transition:transform .18s,box-shadow .18s}
+.ct-card:nth-child(2){animation-delay:.08s}
+.ct-card:nth-child(3){animation-delay:.16s}
+.ct-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c1)}
+.ct-card:active{transform:scale(.975)}
+.ct-ic{width:58px;height:58px;border-radius:19px;display:grid;place-items:center;flex-shrink:0;font-size:29px;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:0 12px 22px -10px var(--c1)}
+.ct-tx{flex:1;min-width:0}
+.ct-tx b{display:block;font-size:16.5px;font-weight:800;letter-spacing:-.3px}
+.ct-tx small{display:block;margin-top:3px;font-size:12.5px;line-height:1.55;color:var(--mu)}
+.ct-go{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:19px;color:var(--c1);background:color-mix(in srgb,var(--c1) 12%,#fff);transition:transform .2s}
+.ct-card:hover .ct-go{transform:translateX(3px)}
+.ct-card.off{filter:grayscale(1);opacity:.55!important;animation:none;transform:none}
+.ct-card.off .ct-go{display:none}
+.ct-card.off .ct-tx small:after{content:" (শীঘ্রই আসছে)"}
+.ct-note{display:flex;align-items:center;gap:12px;margin-top:20px;padding:14px 16px;border-radius:20px;background:#eef4ff;border:1px dashed #b7cdfb;font-size:12.8px;line-height:1.65;color:#334155}
+.ct-note svg{font-size:22px;color:var(--v);flex-shrink:0}
+@keyframes ctIn{to{opacity:1;transform:none}}
+@keyframes ctFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes ctPulse{0%{box-shadow:0 0 0 0 rgba(74,222,128,.7)}70%{box-shadow:0 0 0 9px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+
+/* ===== MY TRANSACTION PAGE ===== */
+#trView{padding-left:10px;padding-right:10px;padding-bottom:130px}
+.tr-box{margin-top:18px;border-radius:18px;background:#fff;border:1px solid var(--bd);box-shadow:0 8px 22px -14px rgba(20,40,90,.3);overflow:hidden}
+.tr-hd{display:flex;align-items:center;gap:14px;padding:16px 18px;border-bottom:1px solid var(--bd)}
+.tr-hd svg{font-size:26px;color:var(--tx);flex-shrink:0}
+.tr-hd h1{font-size:21px;font-weight:800;letter-spacing:-.4px}
+.tr-scroll{overflow-x:auto}
+.tr-tb{width:100%;border-collapse:collapse;font-size:14px;table-layout:fixed}
+.tr-tb th{background:#e9edf5;color:#475569;font-size:14px;font-weight:800;text-transform:uppercase;padding:16px 8px;text-align:center;border:1px solid #d9e0ec}
+.tr-tb td{padding:14px 8px;text-align:center;border:1px solid var(--bd);font-weight:600;color:var(--tx);word-break:break-word}
+.tr-tb tfoot td{font-weight:800}
+.tr-tb tfoot td:first-child{text-align:right;padding-right:16px}
+.tr-st{display:inline-block;padding:5px 12px;border-radius:99px;font-size:12.5px;font-weight:700;background:#e3f9ec;color:#067647}
+.tr-st.pending{background:#fff4dc;color:#b45309}
+.tr-st.cancelled{background:#fee4e2;color:#b42318}
+.tr-empty{padding:60px 20px;text-align:center;color:var(--mu);font-size:13.5px}
+
 /* ===== MY ACCOUNT (PROFILE) PAGE ===== */
 #acView{padding-left:10px;padding-right:10px;padding-bottom:130px}
 .ac-hero{position:relative;margin-top:16px;border-radius:30px;overflow:hidden;background:#fff;border:1px solid var(--bd);box-shadow:0 18px 40px -24px rgba(20,40,90,.45)}
@@ -653,6 +704,29 @@ html,body,.pk,.po,.btn,.pay,.q,.card,.nav a,.pv-back{touch-action:manipulation}
 .ac-mi .go{margin-left:auto;color:#94a3b8;font-size:17px}
 .ac-mi.out{color:#b42318}
 .ac-mi.out .mi{background:#fee4e2;color:#b42318}
+
+/* Admin Panel - frontend layout; secure server integration is required for live actions */
+.admin-wrap{padding:22px 0 100px}
+.admin-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.admin-head h1{font-size:24px;font-weight:900;letter-spacing:-.5px}
+.admin-tag{font-size:11px;font-weight:800;color:#92400e;background:#fef3c7;border:1px solid #fcd34d;padding:6px 10px;border-radius:99px;white-space:nowrap}
+.admin-notice{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:12px 14px;border-radius:14px;font-size:12px;line-height:1.65;margin-bottom:18px}
+.admin-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.admin-stat{background:#fff;border:1px solid var(--bd);border-radius:17px;padding:15px;box-shadow:0 4px 14px rgba(20,40,90,.05)}
+.admin-stat span{font-size:12px;color:var(--mu);font-weight:700}
+.admin-stat strong{display:block;font-size:24px;margin-top:7px}
+.admin-stat small{font-size:11px;color:var(--mu)}
+.admin-menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
+.admin-menu button{border:1px solid var(--bd);background:#fff;border-radius:15px;padding:15px 12px;text-align:left;font:inherit;font-size:13px;font-weight:800;color:var(--tx);display:flex;align-items:center;gap:10px;min-height:58px}
+.admin-menu button:active{transform:scale(.98)}
+.admin-menu button span{width:32px;height:32px;border-radius:10px;background:#eff6ff;color:#2563eb;display:grid;place-items:center;font-size:17px}
+.admin-section{margin-top:22px;background:#fff;border:1px solid var(--bd);border-radius:18px;padding:16px}
+.admin-section h2{font-size:17px;margin-bottom:12px}
+.admin-empty{padding:22px 10px;text-align:center;color:var(--mu);font-size:13px;line-height:1.7;background:#f8faff;border-radius:12px}
+.admin-back{border:1px solid var(--bd);background:#fff;border-radius:12px;padding:10px 13px;font:inherit;font-weight:700;color:var(--tx)}
+.admin-action{display:inline-flex;align-items:center;justify-content:center;background:var(--g);color:#fff;border:0;border-radius:11px;padding:11px 14px;font:inherit;font-size:12px;font-weight:800;margin:5px 5px 0 0}
+@media(min-width:650px){.admin-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.admin-menu{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
 </style>
 </head>
 <body>
@@ -1249,6 +1323,94 @@ html,body,.pk,.po,.btn,.pay,.q,.card,.nav a,.pv-back{touch-action:manipulation}
   </div>
 </main>
 
+
+<!-- ADMIN PANEL (frontend layout; connect authenticated backend before live use) -->
+<main class="wrap admin-wrap" id="adminView" hidden>
+  <div class="admin-head">
+    <div>
+      <p style="font-size:11px;color:var(--mu);font-weight:800;letter-spacing:1px">SG GAME SHOP BD</p>
+      <h1>Admin Dashboard</h1>
+    </div>
+    <span class="admin-tag">SETUP REQUIRED</span>
+  </div>
+  <div class="admin-notice">
+    এটি Admin Panel-এর UI/ডিজাইন। এখনো Backend, Database বা নিরাপদ Admin Login-এর সঙ্গে যুক্ত নয়। সার্ভার-সাইড Authentication ও API যুক্ত না করা পর্যন্ত এখানে কোনো বাস্তব অর্ডার/পেমেন্ট/ব্যালেন্স পরিবর্তন হবে না।
+  </div>
+  <div class="admin-grid">
+    <div class="admin-stat"><span>Total Orders</span><strong>—</strong><small>Backend সংযোগ বাকি</small></div>
+    <div class="admin-stat"><span>Pending Orders</span><strong>—</strong><small>Backend সংযোগ বাকি</small></div>
+    <div class="admin-stat"><span>Total Users</span><strong>—</strong><small>Backend সংযোগ বাকি</small></div>
+    <div class="admin-stat"><span>Total Sales</span><strong>৳ —</strong><small>Backend সংযোগ বাকি</small></div>
+  </div>
+
+  <div class="admin-menu">
+    <button type="button" data-admin-tab="orders"><span>▣</span>Orders Management</button>
+    <button type="button" data-admin-tab="products"><span>◆</span>Products & Prices</button>
+    <button type="button" data-admin-tab="users"><span>♙</span>User Management</button>
+    <button type="button" data-admin-tab="payments"><span>৳</span>Payments</button>
+    <button type="button" data-admin-tab="codes"><span>◇</span>Redeem Codes</button>
+    <button type="button" data-admin-tab="banners"><span>▧</span>Banner & Notice</button>
+    <button type="button" data-admin-tab="reports"><span>▤</span>Sales Reports</button>
+    <button type="button" data-admin-tab="support"><span>✆</span>Support</button>
+    <button type="button" data-admin-tab="settings"><span>⚙</span>Website Settings</button>
+  </div>
+
+  <section class="admin-section" id="adminContent">
+    <h2>Quick Overview</h2>
+    <div class="admin-empty">
+      <strong>Admin Panel UI প্রস্তুত</strong><br>
+      Orders, products, customers, payments ও অন্যান্য তথ্য দেখাতে Backend API এবং Database সংযোগ করতে হবে।
+    </div>
+    <button class="admin-action" type="button" id="adminHomeBtn">ওয়েবসাইটে ফিরে যান</button>
+  </section>
+</main>
+
+<!-- CONTACT US PAGE -->
+<main class="wrap" id="ctView" hidden>
+  <section class="ct-hero">
+    <div class="ct-hi"><svg class="i"><use href="#head"/></svg></div>
+    <h1>Contact Us</h1>
+    <p>যেকোনো সমস্যা বা প্রশ্নে আমাদের সাথে যোগাযোগ করুন।<br>আমরা সবসময় আপনার পাশে আছি।</p>
+    <span class="ct-live"><i></i>সকাল ৮টা থেকে রাত ১২টা সাপোর্ট চালু</span>
+  </section>
+
+  <div class="ct-sec">আমাদের সাথে যুক্ত হোন</div>
+  <div class="ct-list">
+    <a class="ct-card" href="#" data-link="telegram-channel" style="--c1:#229ed9;--c2:#0b78b8">
+      <span class="ct-ic"><svg class="f"><use href="#tg"/></svg></span>
+      <span class="ct-tx"><b>Telegram Channel</b><small>সরাসরি সাপোর্ট ও লেটেস্ট আপডেট</small></span>
+      <span class="ct-go"><svg class="i"><use href="#arr"/></svg></span>
+    </a>
+    <a class="ct-card" href="#" data-link="telegram-group" style="--c1:#6366f1;--c2:#4338ca">
+      <span class="ct-ic"><svg class="f"><use href="#grp"/></svg></span>
+      <span class="ct-tx"><b>Telegram Group</b><small>কমিউনিটিতে জয়েন করে আলোচনা করুন</small></span>
+      <span class="ct-go"><svg class="i"><use href="#arr"/></svg></span>
+    </a>
+    <a class="ct-card" href="#" data-link="youtube-channel" style="--c1:#ef4444;--c2:#b91c1c">
+      <span class="ct-ic"><svg class="f"><use href="#yt"/></svg></span>
+      <span class="ct-tx"><b>YouTube Channel</b><small>টিউটোরিয়াল ও ভিডিও দেখুন</small></span>
+      <span class="ct-go"><svg class="i"><use href="#arr"/></svg></span>
+    </a>
+  </div>
+
+  <div class="ct-note"><svg class="i"><use href="#info"/></svg><div>অর্ডার-সংক্রান্ত সমস্যায় অর্ডারের স্ক্রিনশট ও পেমেন্টের ট্রানজেকশন আইডি সহ মেসেজ দিন।</div></div>
+</main>
+
+<!-- MY TRANSACTION PAGE -->
+<main class="wrap" id="trView" hidden>
+  <section class="tr-box">
+    <div class="tr-hd"><svg class="i"><use href="#a-list"/></svg><h1>All Transaction</h1></div>
+    <div class="tr-scroll">
+      <table class="tr-tb">
+        <thead><tr><th>Number</th><th>Amount</th><th>Status</th></tr></thead>
+        <tbody id="trBody"></tbody>
+        <tfoot><tr><td>Total:</td><td id="trTotal">৳0</td><td></td></tr></tfoot>
+      </table>
+    </div>
+    <div class="tr-empty" id="trEmpty">কোনো ট্রানজেকশন নেই</div>
+  </section>
+</main>
+
 <!-- MY ACCOUNT PAGE -->
 <main class="wrap" id="acView" hidden>
   <section class="ac-hero">
@@ -1347,7 +1509,7 @@ html,body,.pk,.po,.btn,.pay,.q,.card,.nav a,.pv-back{touch-action:manipulation}
       <a class="acc-it" href="#" data-go="codes"><svg class="i"><use href="#a-grid"/></svg>My Codes</a>
       <a class="acc-it" href="#" data-go="transaction"><svg class="i"><use href="#a-list"/></svg>My Transaction</a>
       <a class="acc-it" href="#" data-go="addmoney"><svg class="i"><use href="#a-addm"/></svg>Add Money</a>
-      <a class="acc-it" href="#" data-link="telegram-channel"><svg class="i"><use href="#info"/></svg>Contact Us</a>
+      <a class="acc-it" href="#" data-go="contact"><svg class="i"><use href="#info"/></svg>Contact Us</a>
     </nav>
     <a class="acc-sup" href="#" data-link="telegram-channel"><svg class="i"><use href="#head"/></svg>Support</a>
   </div>
@@ -1889,8 +2051,13 @@ setInterval(fetchFreshAccountConfig, 15000);
   var toastEl=document.getElementById('toast'), tt;
   function toast(m){toastEl.textContent=m;toastEl.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toastEl.classList.remove('show')},2400)}
   function route(){
-    var onFF=location.hash==='#ff-likes', onUid=location.hash==='#uid-topup', onWm=location.hash==='#weekly-monthly', onWl=location.hash==='#weekly-lite', onLu=location.hash==='#level-up-pass', onIn=location.hash==='#indonesia-server', onOr=location.hash==='#my-orders', onCd=location.hash==='#my-codes', onAc=location.hash==='#account';
-    home.hidden=onFF||onUid||onWm||onWl||onLu||onIn||onOr||onCd||onAc; foot.hidden=onFF||onUid||onWm||onWl||onLu||onIn||onOr||onCd||onAc;
+    var onFF=location.hash==='#ff-likes', onUid=location.hash==='#uid-topup', onWm=location.hash==='#weekly-monthly', onWl=location.hash==='#weekly-lite', onLu=location.hash==='#level-up-pass', onIn=location.hash==='#indonesia-server', onOr=location.hash==='#my-orders', onCd=location.hash==='#my-codes', onAc=location.hash==='#account', onTr=location.hash==='#my-transaction', onCt=location.hash==='#contact-us';
+    var onAdmin=location.hash==='#admin-panel';
+    home.hidden=onFF||onUid||onWm||onWl||onLu||onIn||onOr||onCd||onAc||onTr||onCt||onAdmin; foot.hidden=onFF||onUid||onWm||onWl||onLu||onIn||onOr||onCd||onAc||onTr||onCt||onAdmin;
+    var tv=document.getElementById('trView'); if(tv) tv.hidden=!onTr;
+    var ctv=document.getElementById('ctView'); if(ctv) ctv.hidden=!onCt;
+    var adminView=document.getElementById('adminView'); if(adminView) adminView.hidden=!onAdmin;
+    
     var av=document.getElementById('acView'); if(av) av.hidden=!onAc;
     var cv=document.getElementById('cdView'); if(cv) cv.hidden=!onCd; ff.hidden=!onFF;
     var ov=document.getElementById('orView'); if(ov) ov.hidden=!onOr;
@@ -2424,7 +2591,7 @@ setInterval(fetchFreshAccountConfig, 15000);
     if(on){ closePanel(); }
     if(navOrders) navOrders.classList.toggle('on',on);
     if(on){ if(navHome) navHome.classList.remove('on'); if(navAcc) navAcc.classList.remove('on'); }
-    else if(navHome && !panel.classList.contains('show') && !/^#(ff-likes|uid-topup|weekly-monthly|weekly-lite|level-up-pass|indonesia-server|my-codes)$/.test(location.hash)) navHome.classList.add('on');
+    else if(navHome && !panel.classList.contains('show') && !/^#(ff-likes|uid-topup|weekly-monthly|weekly-lite|level-up-pass|indonesia-server|my-codes|my-transaction|contact-us)$/.test(location.hash)) navHome.classList.add('on');
   }
   function go(e){ e.preventDefault(); e.stopImmediatePropagation(); location.hash='my-orders'; sync(); }
   if(navOrders) navOrders.addEventListener('click',go);
@@ -2534,7 +2701,7 @@ setInterval(fetchFreshAccountConfig, 15000);
 
   // নিচের নেভের হাইলাইট: পেজ অনুযায়ী ঠিক রাখা
   function applyNav(){
-    var map={'#my-orders':1,'#my-codes':3,'#account':4};
+    var map={'#my-orders':1,'#my-codes':3,'#account':4,'#my-transaction':-1,'#contact-us':-1};
     var idx = panel.classList.contains('show') ? 4 : (map[location.hash]!=null ? map[location.hash] : 0);
     [0,1,3,4].forEach(function(k){ if(navLinks[k]) navLinks[k].classList.toggle('on',k===idx); });
   }
@@ -2616,5 +2783,104 @@ setInterval(fetchFreshAccountConfig, 15000);
   });
 })();
 </script>
+<script>
+// ==========================================
+// 14. MY TRANSACTION PAGE
+// ==========================================
+(function(){
+  var panel=document.getElementById('accPanel');
+  var body=document.getElementById('trBody'), empty=document.getElementById('trEmpty'), total=document.getElementById('trTotal');
+  function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+
+  // ট্রানজেকশনের ডাটা এভাবে পাঠান (ব্যাকএন্ড থেকে):
+  // renderTransactions([{number:'01712345678', amount:500, status:'Completed'}])
+  window.renderTransactions=function(items){
+    items=items||[]; body.innerHTML=''; var sum=0;
+    empty.style.display=items.length?'none':'block';
+    items.forEach(function(t){
+      var st=String(t.status||'Completed'), cls=/pend|process/i.test(st)?'pending':(/cancel|fail|reject/i.test(st)?'cancelled':'');
+      var amt=Number(t.amount||0); if(!cls) sum+=amt;
+      var tr=document.createElement('tr');
+      tr.innerHTML='<td>'+esc(t.number)+'</td><td>৳'+amt+'</td><td><span class="tr-st '+cls+'">'+esc(st)+'</span></td>';
+      body.appendChild(tr);
+    });
+    total.textContent='৳'+sum;
+  };
+  window.renderTransactions([]);
+
+  function sync(){
+    var navLinks=[].slice.call(document.querySelectorAll('nav.nav a'));
+    if(location.hash==='#my-transaction'){
+      panel.classList.remove('show'); panel.setAttribute('aria-hidden','true'); document.body.style.overflow='';
+      setTimeout(function(){ navLinks.forEach(function(n){ n.classList.remove('on'); }); },0);
+    }
+  }
+  function go(e){ e.preventDefault(); e.stopImmediatePropagation(); location.hash='my-transaction'; sync(); }
+  var it=document.querySelector('.acc-it[data-go="transaction"]');
+  if(it) it.addEventListener('click',go,true);
+  window.addEventListener('hashchange',sync);
+  sync();
+})();
+</script>
+<script>
+// ==========================================
+// 15. CONTACT US PAGE (লিংক account.js থেকে আসে)
+// ==========================================
+(function(){
+  var panel=document.getElementById('accPanel');
+  function mark(){
+    if(typeof window.syncAccountLinks==='function') window.syncAccountLinks();
+    document.querySelectorAll('#ctView .ct-card').forEach(function(a){
+      var h=a.getAttribute('href');
+      a.classList.toggle('off', !h || h==='#');
+      if(!h || h==='#') a.onclick=function(e){e.preventDefault();};
+    });
+  }
+  function sync(){
+    if(location.hash==='#contact-us'){
+      panel.classList.remove('show'); panel.setAttribute('aria-hidden','true'); document.body.style.overflow='';
+      mark();
+      setTimeout(function(){ [].slice.call(document.querySelectorAll('nav.nav a')).forEach(function(n){ n.classList.remove('on'); }); },0);
+    }
+  }
+  function go(e){ e.preventDefault(); e.stopImmediatePropagation(); location.hash='contact-us'; sync(); }
+  var it=document.querySelector('.acc-it[data-go="contact"]');
+  if(it) it.addEventListener('click',go,true);
+  window.addEventListener('hashchange',sync);
+  window.addEventListener('load',mark);
+  setTimeout(mark,1200); // account.js লোড হওয়ার পর লিংক আপডেট
+  sync();
+})();
+</script>
+
+<script>
+// ADMIN PANEL UI NAVIGATION ONLY — live operations require authenticated backend APIs.
+(function(){
+  var view=document.getElementById('adminView');
+  if(!view) return;
+  var content=document.getElementById('adminContent');
+  var labels={
+    orders:['Orders Management','নতুন, Pending, Completed ও Rejected অর্ডার এখানে দেখানো হবে।'],
+    products:['Products & Prices','Free Fire Likes, Diamond, Weekly/Monthly, Weekly Lite, Level Up Pass এবং Indonesia Server-এর পণ্য ও দাম পরিচালনা।'],
+    users:['User Management','গ্রাহকের অ্যাকাউন্ট, প্রোফাইল ও অ্যাকাউন্ট স্ট্যাটাস পরিচালনা।'],
+    payments:['Payments','পেমেন্ট রেকর্ড, Payment verification এবং wallet transaction পরিচালনা।'],
+    codes:['Redeem Codes','Redeem Code তৈরি, মেয়াদ ও ব্যবহার-সংক্রান্ত তথ্য পরিচালনা।'],
+    banners:['Banner & Notice','হোমপেজের ব্যানার, নোটিশ ও গ্রাহক নোটিফিকেশন পরিচালনা।'],
+    reports:['Sales Reports','দৈনিক, মাসিক বিক্রি ও অর্ডারের রিপোর্ট।'],
+    support:['Support','গ্রাহকের সাপোর্ট অনুরোধ ও যোগাযোগ পরিচালনা।'],
+    settings:['Website Settings','ওয়েবসাইটের নাম, লিংক ও অন্যান্য সেটিংস পরিচালনা।']
+  };
+  view.querySelectorAll('[data-admin-tab]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=labels[btn.getAttribute('data-admin-tab')];
+      if(!item) return;
+      content.innerHTML='<h2>'+item[0]+'</h2><div class="admin-empty">'+item[1]+'<br><br><b>এখনো Backend-এর সঙ্গে সংযুক্ত নয়।</b><br>নিরাপদ API যুক্ত করার পর এই অংশে আসল তথ্য ও কাজের বাটন চালু হবে।</div>';
+    });
+  });
+  var home=document.getElementById('adminHomeBtn');
+  if(home) home.addEventListener('click',function(){location.hash='';});
+})();
+</script>
+
 </body>
 </html>
