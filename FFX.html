@@ -2707,10 +2707,36 @@ setInterval(fetchFreshAccountConfig, 15000);
     box.appendChild(icon(iconId)); box.appendChild(document.createTextNode(text));
   }
   function pickName(d){
-    if(!d) return '';
-    var n=d.name || (d.player&&d.player.name) || (d.raw&&d.raw.name) || '';
-    n=String(n||'').trim();
-    return (n && n!=='None' && n!=='null') ? n : '';
+    if(!d || typeof d !== 'object') return '';
+    // Different UID APIs/accounts may return the nickname under different keys.
+    var objects=[d, d.data, d.player, d.raw, d.player_info, d.playerInfo,
+      d.basicinfo, d.basicInfo, d.AccountInfo, d.accountInfo,
+      d.account_info, d.profile, d.info];
+    var keys=['name','nickname','account_name','accountName','AccountName',
+      'player_name','playerName','nickName'];
+    for(var i=0;i<objects.length;i++){
+      var obj=objects[i];
+      if(!obj || typeof obj!=='object' || Array.isArray(obj)) continue;
+      for(var j=0;j<keys.length;j++){
+        var v=obj[keys[j]];
+        if(v!==undefined && v!==null){
+          var name=String(v).trim();
+          if(name && name.toLowerCase()!=='none' && name.toLowerCase()!=='null' && name!=='-') return name;
+        }
+      }
+    }
+    // This API may return the account name as an item in all_fields[].
+    var fields=d.all_fields || (d.data && d.data.all_fields);
+    if(Array.isArray(fields)){
+      for(var k=0;k<fields.length;k++){
+        var field=fields[k];
+        if(field && /^(account_name|name|nickname|player_name)$/i.test(String(field.key||''))){
+          var fieldName=String(field.value==null?'':field.value).trim();
+          if(fieldName && fieldName.toLowerCase()!=='none' && fieldName.toLowerCase()!=='null' && fieldName!=='-') return fieldName;
+        }
+      }
+    }
+    return '';
   }
 
   PAGES.forEach(function(ids){
