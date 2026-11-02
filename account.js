@@ -6,7 +6,7 @@ var website_name = "SG GAME SHOP BD";
 // =======================================================
 // TELEGRAM CHANNEL LINK
 // =======================================================
-var telegram_channel_link = "@SGGAMESHOP_SUPPORT";
+var telegram_channel_link = "t.me/SGGAMESHOP_SUPPORT";
 
 // =======================================================
 // TELEGRAM GROUP LINK
